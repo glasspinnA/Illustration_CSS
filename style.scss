@@ -54,6 +54,7 @@ body {
 	overflow: hidden;
     //Tounge
     &:after{
+        animation: toungeRotate 2s linear infinite;
         width: 100px;
     	height: 80px;
     	left: 25px;
@@ -80,6 +81,7 @@ body {
       top: 5px;
       background-color: $white;
       border-radius: 50%;
+      animation: eyelook 2s linear infinite;
     }
     &.eye-left {
       left: 15px;
@@ -88,4 +90,32 @@ body {
       right: 15px;
     }
   }
+}
+
+
+@keyframes eyelook {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes toungeRotate{
+    0%{
+        transform: translateY(30px);
+        transform: translateX(30px);
+    }
+    50%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateY(30px);
+        transform: translateX(30px);
+    }
 }
